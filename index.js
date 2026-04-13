@@ -2,8 +2,8 @@ const TelegramBot = require('node-telegram-bot-api');
 const mongoose = require('mongoose');
 
 // ===== CONFIG =====
-const TOKEN = "8634672475:AAEJNHCwpDLaRYUa8xHCcqjeMD2WOiU8QcE";
-const MONGO = "mongodb+srv://nguyenan2502:Zxcvbnm@tanbdg.teh63h5.mongodb.net/?appName=TanBDG";
+const TOKEN = process.env.TOKEN;
+const MONGO = process.env.MONGO;
 
 const bot = new TelegramBot(TOKEN, { polling: true });
 
