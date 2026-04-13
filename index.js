@@ -5,6 +5,19 @@ const mongoose = require('mongoose');
 const TOKEN = process.env.TOKEN;
 const MONGO = process.env.MONGO;
 
+const express = require('express');
+const app = express();
+
+const PORT = process.env.PORT || 3000;
+
+app.get('/', (req, res) => {
+  res.send('Bot is running');
+});
+
+app.listen(PORT, () => {
+  console.log('Server running');
+});
+
 const bot = new TelegramBot(TOKEN, { polling: true });
 
 mongoose.connect(MONGO);
